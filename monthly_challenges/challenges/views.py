@@ -4,7 +4,11 @@ from django.http import HttpResponse, HttpResponseNotFound
 # Create your views here.
 
 
-def monthly_challenges(request, month):
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
+
+
+def monthly_challenge(request, month):
     MONTH_MAPPER = {
         "january": "Eat no meat for the entire month!",
         "february": "Walk for at least 20 minutes every day!",
