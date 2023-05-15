@@ -9,10 +9,10 @@ def monthly_challenge_by_number(request, month):
 
 
 def monthly_challenge(request, month):
-    MONTH_MAPPER = {
+    MONTH_CHALLENGE_MAPPER = {
         "january": "Eat no meat for the entire month!",
         "february": "Walk for at least 20 minutes every day!",
-        "march": "Learn Django for at least 20 minutes every day!"
+        "march": "Learn Django for at least 20 minutes every day!",
     }
 
-    return HttpResponse(MONTH_MAPPER[month]) if MONTH_MAPPER.get(month) else HttpResponseNotFound("This month is not supported!")
+    return HttpResponseNotFound("This month is not supported!") if MONTH_CHALLENGE_MAPPER.get(month) == None else HttpResponse(MONTH_CHALLENGE_MAPPER[month])
