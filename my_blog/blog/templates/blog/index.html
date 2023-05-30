@@ -2,13 +2,32 @@
 {% load static %}
 
 {% block page_title %}
-    All blogs
+    My Blog
+{% endblock  %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock  %}
 
 {% block content %}
-    <ul>
-        {% for blog_name in blog_names %}
-            <li><a href="{% url 'blog-detail' blog_name %}">{{ blog_name|title }}</a></li>
-        {% endfor %}
-    </ul>
+    <section id="welcome">
+        <header>
+            <img src="https://source.unsplash.com/random/200x200/?code" alt="Max - The author of this blog">
+            <h2>MAXIMILIAN'S BLOG</h2>
+        </header>
+        <p>Hi, I am Max and I love to blog about tech and the world</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I love programming, I love to help others and I enjoy exploring new technologies in general!</p>
+        <p>My goal is to keep on growing as a developer - and if I could help you do the same, I'd be very happy!</p>
+    </section>
 {% endblock  %}

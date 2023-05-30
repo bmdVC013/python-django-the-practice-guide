@@ -1,0 +1,19 @@
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+{% endblock  %}
+
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/coding.jpg" %}" alt="Mountain Hiking" height="250" width="250">
+            <div class="post__content">
+                <h3>Mountain Hiking</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, numquam! In aperiam explicabo dolorum facere!
+                </p>
+            </div>
+        </a>
+    </article>
+</li>
