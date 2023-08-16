@@ -46,10 +46,22 @@ body {
 #summary address {
     font-weight: bold;
 }
+
+#summary address a {
+    color: white;
+    text-decoration: none;
+}
+
+#summary .tag {
+    background-color: white;
+    color: #390281;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
   
 #summary time {
     font-weight: bold;
-} 
+}
   
 main {
     width: 90%;
